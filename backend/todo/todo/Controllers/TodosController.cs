@@ -17,21 +17,21 @@ namespace todos.Controllers
             "Do things with kids"
         };
 
-        // GET api/todoss
+        // GET api/todos
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
             return all;
         }
 
-        // GET api/todoss/5
+        // GET api/todos/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
             return "todos";
         }
 
-        // POST api/todoss
+        // POST api/todos
         [HttpPost]
         public ActionResult<IEnumerable<string>> Post([FromBody] string todos)
         {
@@ -41,13 +41,13 @@ namespace todos.Controllers
 
 
 
-        // PUT api/todoss/5
+        // PUT api/todos/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string todos)
         {
         }
 
-        // DELETE api/todoss/5
+        // DELETE api/todos/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
