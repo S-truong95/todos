@@ -41,4 +41,22 @@ function navTodos(){
         });
     });
 
+    const app = document.querySelector("#app");
+    app.addEventListener("click", function(){
+        if(event.target.classList.contains("add-toDo__submit")) {
+            const toDo = event.target.parentElement.querySelector(
+                ".add-toDo__toDoName"
+            ).value;
+
+            console.log(toDo);
+            apiActions.postRequest("https://localhost:44385/api/todos",
+            toDo,
+            toDos =>{
+                console.log(toDos);
+                document.querySelector("#app").innerHTML = Todos(toDos)
+            })
+        }
+    })
+
+
 }
