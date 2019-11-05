@@ -5,7 +5,7 @@ export default function Todos(toDos) {
               .map(toDo => {
                 return `
                     <li>
-                        <h3>${toDo}</h3>
+                        <h3>${toDo.name}</h3>
                     </li>
                 `;
               })

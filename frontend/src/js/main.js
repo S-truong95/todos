@@ -50,7 +50,9 @@ function navTodos(){
 
             console.log(toDo);
             apiActions.postRequest("https://localhost:44385/api/todos",
-            toDo,
+            {
+                name: toDo
+            },
             toDos =>{
                 console.log(toDos);
                 document.querySelector("#app").innerHTML = Todos(toDos)
